@@ -12,8 +12,12 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
-      author: {
-        type: Sequelize.STRING
+      authorId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Authors',
+          key: 'id'
+        }
       },
       year_published: {
         type: Sequelize.INTEGER
