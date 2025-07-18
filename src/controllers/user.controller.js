@@ -1,4 +1,5 @@
 const userService = require('../services/user.service');
+const AppError = require("../utils/AppError");
 
 exports.create = async(req, res) => {
     try {

@@ -1,4 +1,5 @@
 const reservationService = require('../services/reservation.service');
+const AppError = require("../utils/AppError");
 
 exports.add = async (req, res) => {
     try {

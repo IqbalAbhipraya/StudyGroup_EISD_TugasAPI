@@ -8,6 +8,7 @@ const bookRoutes = require('./src/routes/book.routes');
 const authorRoutes = require('./src/routes/author.routes');
 const borrowRoutes = require('./src/routes/borrow.routes');
 const reservationRoutes = require('./src/routes/reservation.routes');
+const authRoutes = require('./src/routes/auth.routes');
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
@@ -22,6 +23,7 @@ app.use('/api/books', bookRoutes);
 app.use('/api/authors', authorRoutes);
 app.use('/api/borrow', borrowRoutes);
 app.use('/api/reservation', reservationRoutes);
+app.use('/api/auth', authRoutes);
 
 app.listen(port, () => {
     console.log(`Server berjalan di http://localhost:${port}`);
