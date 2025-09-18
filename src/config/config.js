@@ -16,10 +16,11 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": process.env.PGUSER,
-    "password": process.env.PGPASSWORD,
-    "database": process.env.PGDATABASE,
-    "host": process.env.PGHOST,
-    "dialect": "postgres"
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "dialectOptions": {
+      ssl: { require: true, rejectUnauthorized: false }
+    }
   }
-}
+};
+
